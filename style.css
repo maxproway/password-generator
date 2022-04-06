@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #1c1c1c;
+    --color-dark: #1f2937;
+    --color-light-dark: #273549;
+    --color-grey: #d5d4d8;
+    --color-accent: #4adf86;
+    --color-accent2: #10b981;
+    --color-accent3: #55f991;
+
+    --ff-primary: "Inter", sans-serif;
+    --ff-accent: "Karla", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-primary);
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    width: 550px;
+    height: 550px;
+    background-color: var(--color-dark);
+    margin: 0 auto;
+    padding: 52px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: var(--ff-accent);
+    color: #fff;
+    line-height: 40px;
+    margin-top: 60px;
+}
+
+.title--accent {
+    color: var(--color-accent);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    line-height: 1.75em;
+    color: var(--color-grey);
+    font-weight: 400;
+}
+
+.generate-btn {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+    background: #10b981;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    /* padding: 0.5em 1em 0.5em 2em; */
+    padding-left: 1.8em;
+    letter-spacing: 0.5px;
+    margin-top: 30px;
+    width: 211px;
+    margin-left: 18px;
+    height: 40px;
+}
+
+.generate-btn::before {
+    content: "";
+    background-image: url(./img/light-bolt-icon.svg);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    left: 0.5em;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+hr {
+    border: 1px solid var(--color-light-dark);
+    margin: 35px 0;
+}
+
+.pwds__list {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-gap: 27px;
+}
+
+.pwd__item {
+    background-color: var(--color-light-dark);
+    border-radius: 6px;
+    width: 211px;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    color: var(--color-dark);
+    cursor: pointer;
+}
+
+.pwd__item:hover {
+    content: "click to copy";
+}
+.pwd__item--highlight {
+    color: var(--color-accent3);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.pwd-length {
+    width: 211px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    padding-left: 1em;
+}
+
+.btn-disabled {
+    cursor: inherit;
+    opacity: 0.5;
+}

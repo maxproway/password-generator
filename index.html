@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Karla:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Password Generator</title>
+    </head>
+    <body>
+        <main class="app">
+            <h1 class="title">
+                Generate a
+                <div class="title--accent">random password</div>
+            </h1>
+            <p class="subtitle">Never use an insecure password again.</p>
+            <input
+                id="pwd-length"
+                class="pwd-length"
+                type="number"
+                min="1"
+                max="20"
+                placeholder="Password Length (1-20)"
+            />
+            <a href="#" id="generate-btn" class="generate-btn btn-disabled" onclick="generatePasswords()"
+                >Generate passwords</a
+            >
+
+            <hr />
+            <div class="pwds-area">
+                <ul class="pwds__list">
+                    <li id="pwd__item-1" class="pwd__item" onclick="copyPassword(this.id)" title="click to copy">
+                        &#149;&#149;&#149;
+                    </li>
+                    <li id="pwd__item-2" class="pwd__item" onclick="copyPassword(this.id)" title="click to copy">
+                        &#149;&#149;&#149;
+                    </li>
+                    <li id="pwd__item-3" class="pwd__item" onclick="copyPassword(this.id)" title="click to copy">
+                        &#149;&#149;&#149;
+                    </li>
+                    <li id="pwd__item-4" class="pwd__item" onclick="copyPassword(this.id)" title="click to copy">
+                        &#149;&#149;&#149;
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>
